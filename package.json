@@ -1,0 +1,15 @@
+{
+  "name": "vidi-metrics-emitter",
+  "version": "0.1.0",
+  "description": "Wrapper to emit metrics to vidi from javascript code.",
+  "main": "emitter.js",
+  "author": "Jane Quinn (http://github.com/CodeWriterWriter)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vidi-insights/vidi-metrics-emitter.git"
+  },
+  "dependencies": {
+    "Mosca": "*"
+  }
+}
