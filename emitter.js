@@ -1,9 +1,13 @@
 const dgram = require('dgram')
 const server = dgram.createSocket('udp4')
-const vidi = require('vidi-metrics')
+
+var opts = {
+  host: 'localhost',
+  port: 5001
+}
 
 function emit(message) {
-  server.send(message,vidi.opts.port, vidi.opts.host)
+  server.send(message, opts.port, opts.host)
 }
 
 /*server.on('listening', function () {
