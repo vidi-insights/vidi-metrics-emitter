@@ -1,5 +1,5 @@
 ![Banner][]
-# vidi-metrics-web
+# vidi-metrics-emitter
 
 - __Lead Maintainer:__ [Jane Quinn][Lead]
 - __Sponsor:__ [nearForm][Sponsor]
