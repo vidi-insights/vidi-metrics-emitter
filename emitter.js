@@ -1,13 +1,22 @@
-const dgram = require('dgram')
-const server = dgram.createSocket('udp4')
+var dgram = require('dgram')
+var server = dgram.createSocket('udp4')
+module.exports = function emitter() {
 
-var opts = {
-  host: 'localhost',
-  port: 5001
-}
+  var opts = {
+    plugin: 'vidi-metrics-emiter',
+    host: 'localhost',
+    port: 5001
+  }
 
-function emit(message) {
-  server.send(message, opts.port, opts.host)
+  function emit(message) {
+    message.timestamp = Date.now()
+    server.send(JSON.stringify(message), opts.port, opts.host)
+  }
+  return {
+    name: opts.plugin,
+    emit: emit,
+    opts: opts
+  }
 }
 
 /*server.on('listening', function () {
