@@ -16,6 +16,6 @@
     "url": "git://github.com/vidi-insights/vidi-metrics-emitter.git"
   },
   "dependencies": {
-    "Mosca": "*"
+    
   }
 }
