@@ -1,6 +1,5 @@
 var dgram = require('dgram')
 var server = dgram.createSocket('udp4')
-var string = "a"
 module.exports = function emitter() {
 
   var opts = {
@@ -11,10 +10,12 @@ module.exports = function emitter() {
 
   function emit(message) {
     message.timestamp = Date.now()
-    server.send(message, opts.port, opts.host)
+    server.send(JSON.stringify(message), opts.port, opts.host)
   }
   return {
-    name: opts.plugin
+    name: opts.plugin,
+    emit: emit,
+    opts: opts
   }
 }
 
