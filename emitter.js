@@ -10,7 +10,7 @@ module.exports = function emitter() {
 
   function emit(message) {
     message.timestamp = Date.now()
-    server.send(JSON.stringify(message), opts.port, opts.host)
+    server.send(JSON.stringify(message),JSON.stringify(message).length, opts.port, opts.host)
   }
   return {
     name: opts.plugin,
