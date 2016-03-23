@@ -15,6 +15,9 @@
     "type": "git",
     "url": "git://github.com/vidi-insights/vidi-metrics-emitter.git"
   },
+  "scripts": {
+    "demo": "node test.js"
+  },
   "dependencies": {
     
   }
