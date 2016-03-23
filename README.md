@@ -30,7 +30,7 @@ npm run start
 ```
 
 ## Contributing
-The [nearForm][Org] encourages __open__ and __safe__ participation.
+The [nearForm][Org] organization encourages __open__ and __safe__ participation.
 
 - [Code of Conduct][CoC]
 
