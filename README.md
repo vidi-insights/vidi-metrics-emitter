@@ -16,18 +16,31 @@ To install the system locally, simply clone the repo,
 git clone https://github.com/vidi-insights/vidi-metrics-emitter
 ```
 
-Next, install and build via npm,
+## Running as a plugin 
+Emitter takes JSON message adds time stamp, sends to newly created server and closes connection. To use as a plugin, install via npm:
+```
+npm install vidi-metrics-emitter
+```
+and use in your code :
 
 ```
-npm install
+var Emitter = require("vidi-metrics-emitter")
+...
+emitter.emit(goodJson)
+...
+
 ```
 
-## Running
-To run the system simply use npm,
+## Demo
+To run demo version simply use. 
 
 ```
-npm run start
+npm run demo
 ```
+
+It will create a dummy UDP server, when receives message sends it out through emitter.
+
+
 
 ## Contributing
 The [nearForm][Org] organization encourages __open__ and __safe__ participation.
