@@ -17,6 +17,7 @@
   },
   "scripts": {
     "test": "lab -t 100",
+    "demo": "node test.js"
   },
   "dependencies": {
 
